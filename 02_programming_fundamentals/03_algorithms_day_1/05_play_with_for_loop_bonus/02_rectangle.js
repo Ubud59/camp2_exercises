@@ -12,3 +12,12 @@
 // **********
 // **********
 // ```
+let i = 0;
+for (let j = 0; j < 10; j++) {
+  while (i < 10) {
+    process.stdout.write("*");
+    i++;
+  }
+  process.stdout.write("\n");
+  i = 0;
+}
