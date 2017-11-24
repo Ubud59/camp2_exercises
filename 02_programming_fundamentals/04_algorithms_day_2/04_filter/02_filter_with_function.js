@@ -2,7 +2,18 @@
 // such as filter([1, 2, 3, 4, 5], pickEvenNumbers) returns [2, 4]
 function filter(array, fn) {
   // Your code here
+  const result = [];
+  for (let i = 0; i < array.length; i++ ) {
+    if (fn(array[i]) === true) {
+      result.push(array[i]);
+    }
+  }
+  return result;
 }
+
+
+
+
 
 // do not remove this line, it is for tests
 module.exports = filter;
