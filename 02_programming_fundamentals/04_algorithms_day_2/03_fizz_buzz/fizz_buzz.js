@@ -9,7 +9,23 @@
 */
 
 function fizzBuzz(list) {
-
+  let result = new Array();
+  for (let i=0; i <= list.length-1; i++) {
+    if (list[i] % 15 === 0) {
+      result.push("FizzBuzz");
+      console.log("FizzBuzz");
+    } else if (list[i] % 3 === 0) {
+      result.push("Fizz");
+      console.log("Fizz");
+    } else if (list[i] % 5 === 0) {
+      result.push("Buzz");
+      console.log("Buzz");
+    } else {
+      result.push(list[i]);
+      console.log(i);
+    }
+  }
+  return result;
 }
 
 
