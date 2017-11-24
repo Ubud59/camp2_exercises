@@ -4,9 +4,22 @@
 // This function should work in both ascending or descending order.
 
 // Complete this function.
-function range() {
-
+function range(number1,number2) {
+  let tabnumber = new Array();
+  if (number1 >= number2) {
+    for (let i=number1; i>=number2; i--) {
+      tabnumber.push(i);
+    }
+  } else if (number1 < number2) {
+    for (let i=number1; i<=number2; i++) {
+      tabnumber.push(i);
+    }
+  }
+  console.log(tabnumber);
+  return tabnumber;
 }
+
+range(5,-2);
 
 // Do not remove last lines, it is for tests
 // eslint-disable-next-line
