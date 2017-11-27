@@ -45,7 +45,22 @@ const MORSE_CODE = {
 };
 
 function decodeMorse(morse) {
-  // Your code here
+  let result = "";
+  let mot = "";
+  let i = 0;
+  for (let j = 0; j < morse.length; j++) {
+    while (morse[i] !== " ") {
+      result += morse[i];
+      i++;
+    }
+    console.log("mot avant modif :" + result);
+    mot += MORSE_CODE[result.trim()];
+    console.log("mot après modif" + mot);
+    mot="";
+    result = "";
+    i = 0;
+  }
+  return mot;
 }
 
 // Do not remove last lines, it is for tests
