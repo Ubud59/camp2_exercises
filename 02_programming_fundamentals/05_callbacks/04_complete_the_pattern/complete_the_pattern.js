@@ -34,7 +34,17 @@
 // ```
 
 function pattern(size) {
-  // Your code here
+  let nombre = size.toString();
+  let ligne = "";
+  for (let i = 1; i <= size; i++) {
+    for (let j = 1; j <= i; j++) {
+      ligne = ligne + i.toString();
+      // console.log(ligne);
+    }
+    ligne = ligne + "\n";
+    // console.log("\n");
+  }
+  return ligne.trim();
 }
 
 // Do not remove last lines, it is for tests
