@@ -49,6 +49,7 @@ function decodeMorse(morse) {
   let mot = "";
   let i = 0;
   for (let j = 0; j < morse.length; j++) {
+    i = j;
     while (morse[i] !== " ") {
       result += morse[i];
       i++;
@@ -56,9 +57,7 @@ function decodeMorse(morse) {
     console.log("mot avant modif :" + result);
     mot += MORSE_CODE[result.trim()];
     console.log("mot après modif" + mot);
-    mot="";
     result = "";
-    i = 0;
   }
   return mot;
 }
