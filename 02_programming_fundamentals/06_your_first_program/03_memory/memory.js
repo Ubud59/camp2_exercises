@@ -1,5 +1,5 @@
 // This function will clear the terminal when called
-const clear = require("cli-clear");
+const clear = require("clear-cli");
 const cards = ["🐰", "🐰", "🎃", "🎃", "🌲","🌲"];
 
 console.log(cards);
