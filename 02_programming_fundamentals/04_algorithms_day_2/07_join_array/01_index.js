@@ -5,6 +5,10 @@
 // eg: join(["zero", "one", "two"], "-") => "zero - one - two"
 
 
+function join(array, separator) {
+  return array.reduce((accumulator, currentValue) => accumulator + " " + separator + " " + currentValue);
+}
+
 // ⚠ Do not remove me ! It's for tests
 // eslint-disable-next-line
 module.exports = joinArray;
