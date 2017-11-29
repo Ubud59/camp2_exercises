@@ -1,7 +1,27 @@
-// Add a function `copyPaste` which takes a `path` as input and remove the file
-// if it's a file (do not remove a folder). We don't want to override a file if
-// it already exists.
-//
-// The function returns a boolean indicating if it successfully removed the file.
+const fs = require("fs");
+
+function copyPaste(copyedFilename, pastedFilename) {
+
+  fs.readFile(copyedFilename, (error, data) => {
+    if (error) {
+      console.warn(error);
+    } else {
+      fs.writeFile(
+        pastedFilename,
+        data,
+        (error) => {
+          if (error) {
+            console.warn(`impossible to Copy/Paste because : ${error}`);
+          } else {
+            console.log(`Copy/Paste ${copyedFilename} succeded`);
+          }
+        }
+      );
+    }
+  });
+}
+
+copyPaste('./test.txt', './test2.txt');
+
 
 module.exports = copyPaste;
