@@ -8,6 +8,7 @@ function weatherByLatitudeAndLongitude(latitude,longitude) {
     url: `http://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&APPID=${API_KEY}&units=metric`,
     method: "GET"
   }, function(error, response, result) {
+
     const json = JSON.parse(result);
     const myjason = json.list.map(buildmyjson);
 
@@ -39,6 +40,7 @@ function weatherByZipcode(zipcode,countrycode) {
 
 //weatherByLatitudeAndLongitude(32.661343,51.680374);
 weatherByZipcode("59650", "fr");
+weatherByLatitudeAndLongitude(32.661343,51.680374);
 //weatherByCity("Bogota");
 
 //module.exports = weatherByCity;
