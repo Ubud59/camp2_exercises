@@ -8,7 +8,6 @@ function weatherByLatitudeAndLongitude(latitude,longitude) {
     url: `http://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&APPID=${API_KEY}&units=metric`,
     method: "GET"
   }, function(error, response, result) {
-
     const json = JSON.parse(result);
     const myjason = json.list.map(buildmyjson);
 
