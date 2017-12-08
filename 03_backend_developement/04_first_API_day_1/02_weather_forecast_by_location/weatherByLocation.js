@@ -8,7 +8,6 @@ function weatherByLatitudeAndLongitude(latitude,longitude) {
     url: `http://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&APPID=${API_KEY}&units=metric`,
     method: "GET"
   }, function(error, response, result) {
-
     const json = JSON.parse(result);
     const myjason = json.list.map(buildmyjson);
 
@@ -24,7 +23,22 @@ function buildmyjson(item) {
   };
 }
 
-weatherByLatitudeAndLongitude(32.661343,51.680374);
+function weatherByZipcode(zipcode,countrycode) {
+  return request({
+    url: `http://api.openweathermap.org/data/2.5/forecast?zip=${zipcode},${countrycode}&APPID=${API_KEY}&units=metric`,
+    method: "GET"
+  }, function(error, response, result) {
+
+    const json = JSON.parse(result);
+    const myjason = json.list.map(buildmyjson);
+
+    console.log(myjason);
+  });
+}
+
+
+//weatherByLatitudeAndLongitude(32.661343,51.680374);
+weatherByZipcode("59650", "fr");
 //weatherByCity("Bogota");
 
 //module.exports = weatherByCity;
