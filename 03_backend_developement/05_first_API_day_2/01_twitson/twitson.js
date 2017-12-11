@@ -46,7 +46,7 @@ function askTwitterAccount() {
           console.log("Tristesse :", parseInt(result.emotion.document.emotion.sadness * 100,10) + "%");
           console.log("Joie      :", parseInt(result.emotion.document.emotion.joy * 100,10) + "%");
           console.log("Peur      :", parseInt(result.emotion.document.emotion.fear * 100,10) + "%");
-          console.log("Degoût    :", parseInt(result.emotion.document.emotion.disgust * 100,10) + "%");
+          console.log("Dégoût    :", parseInt(result.emotion.document.emotion.disgust * 100,10) + "%");
           console.log("Colère    :", parseInt(result.emotion.document.emotion.anger * 100,10) + "%");
           askTwitterAccount();
         });
