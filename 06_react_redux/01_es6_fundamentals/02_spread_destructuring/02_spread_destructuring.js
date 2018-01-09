@@ -1,5 +1,5 @@
 function go(options) {
-  let {
+  const {
     speed = 4,
     enable: { hyperdrive = false, frobnifier = true}
   } = options;
@@ -25,7 +25,7 @@ function replace(array, from, to, elements) {
   array.splice.apply(array, [from, to - from].concat(elements));
 }
 
-let testArray = [1, 2, 100, 100, 6];
+const testArray = [1, 2, 100, 100, 6];
 replace(testArray, 2, 4, [3, 4, 5]);
 console.log(testArray);
 
